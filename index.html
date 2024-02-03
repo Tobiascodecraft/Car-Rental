@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="https://kit.fontawesome.com/cce6747441.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="./styles/1style.css">
+    <link rel="stylesheet" href="./styles/2style.css">
+    <link rel="stylesheet" href="./styles/3style.css">
+
+</head>
+<body>
+
+  <section class="section-header">
+
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          Car Rental
+          <span class="material-symbols-outlined icon-header">
+            local_shipping
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav-center" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" onclick="scrollToSectionHome()" >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="VehicleModels.html">Vehicle Models</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Testimonials.html">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="Team.html">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+<div class="container-header">
+
+  <div class="card-header">
+      <p class="card-header-1">Plan your trip now! </p>
+
+      <p class="card-text-big">Save <span class="highlight-word">big </span>with our <br>car rental</p>
+
+      <p class="card-text-small">Rent the car of your dreams. Unbeatable prices, unlimited miles,<br> flexible pick-up options and much more.</p>
+
+      <p id="p-buttons">
+        <button class="btn-ride">Book ride
+          <i class="fa-solid fa-check"></i>
+        </button>
+        <button id="btn-learn">Learn more
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </p>
+  </div>
+
+  <img id="header-image" src="./images/car-image-header.png">
+</div>
+</section>
+
+
+<section id="section-rent-car">
+<h3>Book a car</h3>
+
+  <div class="container-main-rentsection">
+    <div class="card-rentsection">
+      <p class="card-text-rent"><i class="fa-solid fa-car"></i>
+        Select your car type<span class="highlight-word">*</span></p>
+
+      <div class="dropdown">
+        <button  type="button" class="btn dropdown-toggle btn-border stickyItem" data-bs-toggle="dropdown">
+        Select your car type
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item js-select-car" onclick="selectItem('Audi A1S-Line'); changeCarImageAudi()" >Audi A1S-Line</a></li>
+          <li><a class="dropdown-item" onclick="selectItem('VW Golf 6'); changeCarImageVWGolf ()" >VW Golf 6</a></li>
+          <li><a class="dropdown-item" onclick="selectItem('Toyota Camery'); changeCarImageToyota ()" >Toyota Camery</a></li>
+          <li><a class="dropdown-item" onclick="selectItem('BMW 320 ModernLine'); changeCarImageBMW  ()" >BMW 320 ModernLine</a></li>
+          <li><a class="dropdown-item" onclick="selectItem('Mercedes-Benz GLK'); changeCarImageMercedes ()">Mercedes-Benz GLK</a></li>
+          <li><a class="dropdown-item" onclick="selectItem('VW Passat CC'); changeCarImageVWPassat ()">VW Passat CC</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div class="card-rentsection">
+      <p class="card-text-rent"><i class="fa-solid fa-location-dot"></i>
+        Pick up<span class="highlight-word">*</span></p>
+
+      <div class="dropdown">
+        <button type="button" class="btn dropdown-toggle btn-border js-pickUp-location stickyItem-pickUp" data-bs-toggle="dropdown">
+        Select pick up location
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" onclick="selectItempickUp('Germany');displayLocation () ">Germany</a></li>
+          <li><a class="dropdown-item" onclick="selectItempickUp('England');displayLocation ()">England</a></li>
+          <li><a class="dropdown-item" onclick="selectItempickUp('Slowakia');displayLocation ()">Slowakia</a></li>
+          <li><a class="dropdown-item" onclick="selectItempickUp('France');displayLocation ()">France</a></li>
+          <li><a class="dropdown-item" onclick="selectItempickUp('Russia');displayLocation ()">Russia</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="card-rentsection">
+      <p class="card-text-rent"><i class="fa-solid fa-location-dot"></i>
+        Drop of<span class="highlight-word">*</span></p>
+
+      <div class="dropdown">
+        <button type="button" class="btn dropdown-toggle btn-border js-DropOff-location stickyItem-dropOff" data-bs-toggle="dropdown">
+        Select drop off location
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" onclick="selectItemdropOff('Germany'); displayLocationDropOff ()">Germany</a></li>
+          <li><a class="dropdown-item" onclick="selectItemdropOff('England'); displayLocationDropOff ()">England</a></li>
+          <li><a class="dropdown-item" onclick="selectItemdropOff('Slowakia');displayLocationDropOff ()">Slowakia</a></li>
+          <li><a class="dropdown-item" onclick="selectItemdropOff('France');displayLocationDropOff ()">France</a></li>
+          <li><a class="dropdown-item" onclick="selectItemdropOff('Russia');displayLocationDropOff ()">Russia</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="container-main-rentsection">
+    <div class="card-rentsection">
+      <p class="card-text-rent"><i class="fa-solid fa-calendar"></i>
+        Pick up Date<span class="highlight-word">*</span></p>
+        <input id="calendarInput" class="calender-input js-pickUp-date" type="date"></input>
+    </div>
+
+  <div class="card-rentsection">
+    <p class="card-text-rent"><i class="fa-solid fa-calendar"></i>
+      Drop off Date<span class="highlight-word">*</span></p>
+      <input id="calendarInput1" class="calender-input js-item-dropOffTime" type="date"></input>
+  </div>
+
+  <div class="card-rentsection">
+    <p class="card-text-rent">
+      Search offer</p>
+
+      <button onclick="getValuePickupDate(); getValueDropOffDate(); scrollToSection()" type="button" class="btn" id="rent-car-btn-search">
+        <a id="link-book-car">Search <i class="fa-solid fa-magnifying-glass"></i></a>
+      </button>
+
+</div>
+</section>
+
+
+<section id="section-infos">
+  <h5 class="h7">Plan your trip now</h5>
+  <h2>Quick & easy car rental</h2>
+
+  <div class="container-info-section-main">
+
+    <div class="card-info-section">
+      <img id="img-section-info" src="images/icon-contact-info-section.png">
+      <h6>Contact Operator</h6>
+      <p class="card-info-section-text">Our knowledgeable and friendly operators <br>
+        are always ready to help with 
+        any questions or concerns</p>
+    </div>
+
+    <div class="card-info-section">
+      <img id="img-section-info" src="images/icon-info-section.png">
+      <h6>Lets drive</h6>
+      <p class="card-info-section-text">Whether you're hitting the open road, we've got you <br>
+        covered with our wide range of cars </p>
+    </div>
+
+    <div class="card-info-section">
+      <img id="img-section-info" src="images/select-icon-info-section.png">
+      <h6>Select car</h6>
+      <p class="card-info-section-text">We offers a big range of <br>vehicles for 
+        all your<br> driving needs. We have the perfect
+        car to meet your needs</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="choose-vehicle-model">
+<h6>Vehicle Models</h6> <!-- h6, h2 are defined in the Info section-->
+  <h2>Our rental fleet</h2>
+    <p id="model-text">Choose from a variety of our amazing vehicles to rent for your <br>next adventure or business trip</p>
+  
+    <div class="container-models-main">
+
+      <div class="card-choose-model">
+        <button onclick="changeAudi()" class="btn-choose-model">Audi A1 S-Line</button>
+        <button onclick="changeGolf()" class="btn-choose-model">VW Golf 6</button>
+        <button onclick="changeToyota()" class="btn-choose-model">Toyota Camery</button>
+
+        <button onclick="changeBMW()" class="btn-choose-model">BMW 320 ModernLine</button>
+        <button onclick="changeMercedes()" class="btn-choose-model">Mercedes-Benz GLK</button>
+        <button onclick="changeVWpassat()" class="btn-choose-model">VW Passat CC</button>
+      </div>
+
+      <img class="car-model-image js-car" src="./images/model-Audi-A1.png">
+
+      <div class="card-choose-model js-table">
+      <table id="customers">
+        <tr>
+          <th colspan="2"><span id="table-model-price">$45</span> / rent per day</th>
+        </tr>
+        <tr>
+          <td>Model</td>
+          <td>Audi</td>
+        </tr>
+        <tr>
+          <td>Mark</td>
+          <td>A1</td>
+        </tr>
+        <tr>
+          <td>Year</td>
+          <td>2012</td>
+        </tr>
+        <tr>
+          <td>Doors</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>AC</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Transmission</td>
+          <td>Manual</td>
+        </tr>
+        <tr>
+          <td>Fuel</td>
+          <td>Gasoline</td>
+        </tr>
+      </table>
+      <button id="reserve-now">Reserve now</button>
+    </div>
+    
+
+    </div>
+</section>
+
+
+<section id="save-big-banner">
+    <p id="save-big-header">Save big with our cheap car rental!</p>
+    <p id="save-big-text">Top Airports. Local Suppliers. <span id="red"> 24/7 </span> Support.</p>
+</section>
+
+
+<section id="choose-us-section">
+
+  <img id="choose-us-img" src="./images/section-choose-us.png">
+
+  <div class="container-choose-us-main">
+    <div class="card-choose-us">
+      <h5>Why choose us</h5>
+      <h3>Best valued deals you <br>
+        will ever find
+      </h3>
+      <p id="choose-us-text">
+        Discover the best deals you'll ever find with our unbeatable offers. <br>
+        We're dedicated to providing you with the best value for<br>
+         your money, so you can enjoy top-quality<br>
+         services and products without breaking the bank. <br>
+        Our deals are designed to give you the ultimate renting experience,<br>
+         so don't miss out on your chance to save big.<br>
+      </p>
+
+      <button id="button-find-details">Find Details <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+
+    <div class="card-choose-us">
+
+      <div class="container-card-inner">
+        <img id="move-right" src="./images/icon-drive.png">
+        <div class="make-card-column">
+        <h5>Cross Coutry Drive</h5>
+        <p id="media-center">Take your driving experience to the next level with<br> our 
+          top-notch vehicles for your cross-country adventures.</p>
+      </div>
+    </div>
+
+      <div class="container-card-inner">
+        <img id="move-right" src="./images/icon-all-inclusive.png">
+        <div class="make-card-column">
+        <h5>All inclusive pricing</h5>
+        <p id="media-center">Get everything you need in one convenient, transparent<br> price
+           with our all-inclusive pricing policy.</p>
+      </div>
+    </div>
+
+    <div class="container-card-inner">
+      <img id="move-right" src="./images/icon-charges.png">
+      <div class="make-card-column">
+      <h5>No hidden charges</h5>
+      <p id="media-center">Enjoy peace of mind with our no hidden charges policy.<br>
+         We believe in transparent and honest pricing.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Css in 2style.css -->
+<section id="section-testimonials">
+  
+    <h6>Reviewed by People</h6> <!-- Defined in 1style.css -->
+     <h2>Client's Testimonials</h2>
+      <p id="Testimonials-text">Discover the positive impact we've made on the our clients
+       by reading through their testimonials. Our clients have experienced our service and results, 
+       and they're eager to share their positive experiences with you.
+      </p>
+
+      <div class="card-container-testimonials">
+        
+        <div class="card-testimonials">
+          <p id="Testimonials-text-inner">"We rented a car from this<br> website and had an amazing experience!
+             The booking was easy and the rental rates were very affordable. "</p>
+             <div class="make-it-row">
+              <img id="Harry-Potter" src="./images/Harry-Potter.png">
+              <p id="down">Parry Hotter</p>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+      
+        <div class="card-testimonials">
+          <p id="Testimonials-text-inner">"The car was in great condition 
+            and made our trip even better. 
+            Highly recommend for this car rental website!"</p>     
+             <div class="make-it-row">
+              <img id="Harry-Potter" src="./images/Ron -Rissley">
+              <p id="down">Ron Rizzler</p>
+            </div>
+        </div>
+
+
+      </div>
+</section>
+
+
+<section id="FAQ-section">
+  <h6>FAQ</h6>
+  <h2>Frequently Asked Questions</h2>
+  <p id="FAQ-text">Frequently Asked Questions About the Car Rental Booking Process on Our Website:<br>
+     Answers to Common Concerns and Inquiries.</p>
+  
+
+     <div class="container-FAQ">
+      <button type="button" class="btn btn-red" data-bs-toggle="collapse" data-bs-target="#demo">What is special 
+        about comparing rental car deals ?
+        <i class="fa-solid fa-caret-down align"></i>
+      </button>
+      <div id="demo" class="collapse">
+        Comparing rental car deals is important as it helps finding <br>
+        the best deal that fits your budget and requirements, ensuring <br>
+        you get the most value for your money.
+      </div>
+
+      <button type="button" class="btn btn-red" data-bs-toggle="collapse" data-bs-target="#demo1"> 
+       How do I find the car rental deals ?
+        <i class="fa-solid fa-caret-down align-right"></i>
+      </button>
+      <div id="demo1" class="collapse">
+        You can find car rental deals  by reasearching online and comparing prices<br>
+        from different rental companies. Websites such as Expedia, Kayak and Travelocity allow <br>
+        you to compare prices and view available  retal options.
+      </div>
+
+      <button type="button" class="btn btn-red" data-bs-toggle="collapse" data-bs-target="#demo2"> 
+        How do I find such low rental car pricing ?
+         <i class="fa-solid fa-caret-down align"></i>
+       </button>
+       <div id="demo2" class="collapse">
+         Book in advance: Booking your rental car ahead of time can often result in lower<br>
+         prices. Compare prices from multiple companies. Look for discounts and coupons.<br>
+         Renting from an off-airport location can result in lower prices.
+       </div>
+    </div>
+
+</section>
+
+
+<section id="section-app">
+  <div class="container-app-main">
+
+    <div class="card-app-inner">
+      <p id="app-header">Download our app to get<br> most out of it</p>
+      <p id="app-text">
+        By downloading our app you will get lots of benefits like,<span id="red"> 24/7 </span>Support and much more.
+        It is <span id="red">free </span>!
+      </p>
+      <div class="card-store">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="231" height="69" viewBox="0 0 231 69"><image id="ios-app-btn" width="231" height="69" xlink:href="data:image/png;base64,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"></image></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="227" height="69" viewBox="0 0 227 69"><image id="google-app-download" width="227" height="69" xlink:href="data:image/png;base64,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"></image></svg>
+      </div>
+    </div>
+
+    <img id="App-image" src="./images/App-image.png">
+
+  </div>
+</section>
+
+
+<section id="section2">
+<h1>Complete Reservation</h1>
+
+    <div class="note-container">
+        <p id="note-header-red"><i class="fa-solid fa-circle-exclamation"></i>
+            Upon completing this reservation enquiry, you will receive:
+        </p>
+        <p id="note-text">Your rental voucher to produce on arrival
+             at the rental desk and a 
+            toll-free customer support number.</p>
+        </div>
+      </section>
+    <div class="container-row">
+        <div class="container-loc-date">
+        <h4>Location & Date</h4>
+        <br>
+
+        <p id="header-date"><i class="fa-solid fa-calendar-days"></i> Pick-Up Date & Time</p>
+        <p class="js-pickUp-date-display" id="text-date">Rent above</p>
+        <input class="select-time" type="time"></input> 
+
+        <br>
+
+        <p id="header-date"><i class="fa-solid fa-calendar-days"></i> Drop-Off Date & Time</p>
+        <p class="js-dropOff-date-display" id="text-date">Rent above</p>
+        <input class="select-time" type="time"></input> 
+
+        <br>
+
+        <p id="header-date"><i class="fa-solid fa-location-dot"></i> Pick-Up Location</p>
+        <p class="js-pickUp-location-display" id="text-date">Rent above</p>
+
+        <br>
+
+        <p id="header-date"><i class="fa-solid fa-location-dot"></i> Drop-Off Location</p>
+        <p class="js-DropOff-location-display" id="text-date">Rent above</p>
+    </div>
+
+        <img class="js-display-car-model" id="car-model-image" src="./images/model-Audi-A1.png">
+
+</div>
+
+
+<section id="section-data">
+
+    <p id="data-header">Personal Information</p>
+
+    <div class="container-inputs">
+
+        <div class="container-inputs-inner">
+          <input type="text" id="userInput8" class="input-data userInput-personal surname" placeholder="Fist Name"></input>
+          <input type="text" id="userInput9" class="input-data userInput-personal name" placeholder="Second Name"></input>
+        </div>
+
+        <div class="container-inputs-inner">
+            <input id="userInput3" type="text" class="input-data number" placeholder="Phone Number"></input>
+            <input type="text" id="userInput4" class="input-data age" placeholder="Age"></input>
+        </div>
+
+        <div class="container-inputs-inner">
+            <input id="userInput5" type="text" class="input-data-long mail" placeholder="Email"></input>
+        </div>
+
+        <div class="container-inputs-inner">
+            <input id="userInput6" type="text" class="input-data city" placeholder="City"></input>
+            <input id="userInput7" type="text" class="input-data code" placeholder="Zip Code"></input>
+        </div>
+
+        <div class="container-btns">
+          <button onclick=" InputManager ()" id="finish-book-btn">Book ride !</button>
+          <br>
+          <br>
+          <br>
+          <br>
+          <p class="js-displayMessage"></p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section id="section-footer">
+  <div class="container-main-footer">
+
+    <div class="container-footer-inner">
+      <p id="footer-text"><span id="big">CAR</span> Rental</p>
+      <p id="footer-text-under">We offers a big range of vehicles <br>
+         for all your driving needs.<br>
+         We have the perfect car to <br>
+         meet your needs.<br>
+        </p>
+        <p id="phone-text"><i class="fa-solid fa-phone"></i> 123 456 789</p>
+        <p id="phone-text"><i class="fa-solid fa-envelope"></i> carrental@gmail.com</p>
+    </div>
+
+    <div class="container-footer-inner">
+      <p id="footer-text"><span id="big">COMPANY</span></p>
+      <p id="footer-text-red">New York</p>
+      <p id="footer-text-red">Careers</p>
+      <p id="footer-text-red">Mobile</p>
+      <p id="footer-text-red">How we work</p>
+    </div>
+
+    <div class="container-footer-inner">
+      <p id="footer-text"><span id="big">WORKING HOURS</span></p>
+      <p id="footer-text-under">Mon - Fri: 9:00AM <br>
+      - 9:00PM</p>
+      <p id="footer-text-under">Sat: 9:00AM - 19:00PM</p>
+      <p id="footer-text-under">Sun: Closed</p>
+    </div>
+
+    <div class="container-footer-inner">
+      <p id="footer-text"><span id="big">SUBSCRIPTION</span></p>
+      <p id="footer-text-under">Subscribe your Email address <br>
+         for latest news & updates.</p>
+
+      <input id="input-footer" placeholder="Enter Email Address"></input>
+
+      <button id="button-footer">Submit</button>
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<script src="./java scripts/book-car.js"></script>
+<script src="./java scripts/carmodels.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+
+
+h1{
+    margin-top: 10%;
+    text-align: center;
+
+    font-size: 50px;
+    font-weight: 800;
+}
+
+@media (max-width:830px) {
+    h1{
+        margin-top: 20%;
+        text-align: center;
+    
+        font-size: 50px;
+        font-weight: 800;
+    }
+}
+
+.note-container{
+    margin-top: 5%;
+    margin-left: 14%;
+    margin-right: 14%;
+    background-color: #fde2e3;
+    padding: 2%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+#note-header-red{
+    color: red;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#note-text{
+    color: grey;
+    font-size: 20px;
+    font-weight: 450;
+}
+
+.container-loc-date{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#header-date{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#text-date{
+    font-size: 18px;
+    font-weight: 500;
+    color: red;
+}
+
+h4{
+    color: red;
+}
+
+.container-row{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
+@media (max-width:830px) {
+
+    .container-loc-date{
+        margin-top: 5%;
+        margin-left: 20%;
+        margin-right: 5%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #header-date{
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    #text-date{
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    h4{
+        color: red;
+        text-align: center;
+    }
+
+    .container-row{
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: 15%;
+    }
+
+    #car-model-image{
+        width: 55%;
+        height: 60%;
+    
+        margin-top: 10%;
+    }
+}
+
+#car-model-image{
+    width: 45%;
+    height: 50%;
+
+    margin-top: 10%;
+}
+
+#container-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width:830px) {
+    #container-btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+
+    .js-displayMessage{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5%;
+        margin-right: 5%;
+    }
+}
+
+#message-btn{
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    background-color: rgb(166, 197, 166);
+    padding: 1.2%;
+    margin-left: 15%;
+}
+
+.message-btn-unvalid{
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    background-color: rgb(248, 76, 76);
+    padding: 1.2%;
+    margin-left: 15%;
+}
+
+.js-displayMessage{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: -5%;
+    margin-right: 5%;
+}
+
+#section-footer{
+    margin-top: 10%;
+}
+
+
+/*section-data*/
+
+#section-data{
+    background-color: white;
+}
+
+#data-header{
+    color: red;
+    margin-top: 5%;
+    margin-left: 14%;
+    font-size: 34px;
+    font-weight: 650;
+}
+
+.input-data{
+    background-color: #e9ecef;
+    color: black;
+    border: none;
+
+    width: 35%;
+    height: 55px;
+
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 2%;
+}
+
+.input-data-long{
+    background-color: #e9ecef;
+    color: black;
+    border: none;
+
+    width: 80%;
+    height: 55px;
+
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 2%;
+}
+
+.container-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 2%;
+}
+
+.container-inputs-inner{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#finish-book-btn{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 30%;
+    height: 60px;
+
+    background-color: red;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    border: 2px solid red;
+
+    transition: 0.3s;
+}
+
+@media (max-width:830px) {
+    #finish-book-btn{
+        margin-top: 5%;
+        margin-left: 15%;
+        width: 60%;
+        height: 60px;
+    
+        background-color: red;
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+        border: 2px solid red;
+    
+        transition: 0.3s;
+    }
+
+    .select-time{
+     margin-left: 22%;
+    }
+}
+
+#finish-book-btn:hover{
+    background-color: white;
+    color: red;
+    font-size: 24px;
+    font-weight: 600;
+    border:2px solid red;
+}
+
+.select-time{
+    width: 50%;
+}
